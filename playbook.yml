@@ -80,4 +80,6 @@
       docker_container:
         name: e2e-demo-container
         image: anilnalawade/e2e-demo-app:v1
-        state: started      
+        state: started     
+        ports: 
+          - "8000:80"  
