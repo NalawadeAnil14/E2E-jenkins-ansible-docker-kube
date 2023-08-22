@@ -1,5 +1,10 @@
 pipeline {
   agent any
+
+  options {
+    buildDiscarder(logRotator(numToKeepStr: '2', daysToKeepStr: '7'))
+  }
+
   stages {
       stage("test ansible connectivity") {
           steps {
