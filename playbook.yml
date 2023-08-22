@@ -69,8 +69,12 @@
         - name: Rescue block
           debug: 
             msg: "Don't worry"
-
-  
+ 
+    - name: Log into DockerHub
+      community.docker.docker_login:
+        username: "anilnalawade"
+        password: "NilNik@143"
+              
     - name: Pull Docker image
       docker_image:
         name: anilnalawade/e2e-demo-app:v1
