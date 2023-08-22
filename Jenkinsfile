@@ -47,5 +47,16 @@ pipeline {
               }
           }
       }
+
+      stage("Run playbook on target hosts") {
+          steps {
+              script {
+                 sshagent(['jenkins-ansible-master-key']) {
+                  sh 'ssh -o StrictHostKeyChecking=no ubuntu@172.31.88.93 ansible-playbook -i inventory playbook.yml'
+		 }
+              }
+          }
+      }
+
   }  
 } 
