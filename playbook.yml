@@ -1,0 +1,12 @@
+---
+hosts: all 
+tasks:
+  - name: Check connection
+    ping:
+    register: pin_output
+
+  - name: Display connectivity
+    debug:
+      msg: "Successfully connected" 
+    when: "pong" in "{{ pin_output }}"   
+
