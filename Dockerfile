@@ -5,7 +5,7 @@ WORKDIR /var/www/html
 
 RUN yum install -y httpd \
  zip \
- unzip
+ unzip sudo 
 
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page254/photogenic.zip /var/ww/html/
 
