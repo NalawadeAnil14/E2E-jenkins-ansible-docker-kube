@@ -1,4 +1,5 @@
 FROM centos:latest
+MAINTAINER anil nalawade
 
 WORKDIR /var/www/html
 RUN yum install httpd zip unzip -y
