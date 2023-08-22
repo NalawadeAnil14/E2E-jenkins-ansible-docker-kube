@@ -3,6 +3,8 @@ MAINTAINER anil nalawade
 
 WORKDIR /var/www/html
 
+RUN yum update -y 
+
 RUN yum install -y httpd \
  zip \
  unzip sudo 
